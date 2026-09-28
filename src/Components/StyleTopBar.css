@@ -1,0 +1,51 @@
+.top-bar-container {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 32px; 
+  background-color: #2D2D2D;
+  border-bottom: 1px solid #3c3c3c;
+  padding: 0 8px;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 6px;
+}
+
+.top-bar-logo {
+  width: 20px;  
+  height: 20px;
+  object-fit: contain;
+}
+
+
+.menu-group {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+
+.top-bar-btn {
+  background: transparent;
+  color: #cccccc;
+  border: none;
+  outline: none;
+  padding: 3px 9px;
+  font-size: 12px;
+  font-family: monospace, sans-serif;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+
+.top-bar-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1); 
+  color: #ffffff;
+}
