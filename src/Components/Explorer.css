@@ -1,0 +1,128 @@
+.explorer-panel {
+  width: 220px;
+  height: 90.8vh;
+  background-color: #252526;
+  color: #abb2bf;
+  font-family: monospace;
+  border-right: 1px solid #181a1f;
+  user-select: none;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.explorer-section {
+  flex: 1;
+}
+
+.section-title {
+  padding: 12px 16px 8px;
+  font-weight: 700;
+  color: #d7dae0;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.file-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  padding: 6px 16px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  position: relative;
+}
+
+.file-item:hover {
+  background-color: #2c313a;
+}
+
+
+.file-item.active {
+  background-color: #373d49;
+  color: #ffffff;
+}
+
+.file-item.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #007acc;
+}
+
+.file-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  font-size: 20px; 
+}
+
+.file-name {
+  font-size: 14px; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.explorer-footer {
+  padding: 10px;
+  border-top: 1px solid #2d2d2d;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+
+
+
+.sparkle-icon {
+  font-size: 16px;
+}
+
+.ai-badge {
+  font-size: 10px;
+  font-weight: bold;
+  opacity: 0.7;
+}
+
+.git-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #9da5b4;
+  font-size: 13px;
+  padding: 0 4px;
+}
+
+.git-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.git-icon {
+  font-size: 15px;
+}
+
+.git-changes {
+  display: flex;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.git-changes .up {
+  color: #98c379;
+}
+
+.git-changes .diff {
+  color: #d19a66;
+}
