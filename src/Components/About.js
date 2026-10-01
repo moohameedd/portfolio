@@ -1,0 +1,72 @@
+import { motion } from 'framer-motion';
+import { VscMortarBoard, VscVerified, VscOrganization } from 'react-icons/vsc';
+import Page, { rise, stagger } from './Page';
+
+const EDUCATION = [
+  { school: 'ISAMM – Higher Institute of Multimedia Arts of Manouba', degree: '2nd Year · Data Analysis & Big Data', note: 'Good standing · 15.29 / 20', period: 'Now' },
+  { school: 'ISAMM – Higher Institute of Multimedia Arts of Manouba', degree: '1st Year Bachelor’s', note: 'Good standing · 15.28 / 20', period: 'Previous year' },
+  { school: 'Lycée Farabi – Mournaguia', degree: 'High School Diploma, Computer Science', note: 'High honors · 17.3 / 20', period: 'Bac' },
+];
+
+const CERTS = [
+  'Introduction to Deep Learning with PyTorch · DataCamp',
+  'Unsupervised Learning in Python · DataCamp',
+  'Supervised Learning with scikit-learn · DataCamp',
+  'Linux Unhatched · Cisco',
+  'Scientific Computing with Python · freeCodeCamp',
+];
+
+export default function About() {
+  return (
+    <Page comment="<!-- about.html - Mohamed Ferchichi -->" title="About Me" sub="// who I am, what I study, what I'm looking for">
+      <motion.div variants={rise} className="panel">
+        <p className="lead">
+          Hi, I'm <b>Mohamed Ferchichi</b>, a <b>Big Data</b> student at ISAMM. I like software, new
+          technologies and pushing myself further. I'm curious and self-driven, and I spend my time
+          on <b>Linux</b> systems, PC hardware and anything related to tech innovation.
+        </p>
+      </motion.div>
+
+      <motion.div variants={rise} className="panel panel-accent">
+        <h2 className="sec-title">Current focus</h2>
+        <div className="focus-grid">
+          <span>Looking for a <b>PFE internship</b> in data / AI / software</span>
+          <span>Data analysis, ML modeling and big data tools</span>
+          <span>Building neural networks from scratch to understand them</span>
+          <span>⌨81 WPM on the keyboard, solving problems on Codeforces</span>
+        </div>
+      </motion.div>
+
+      <motion.h2 variants={rise} className="sec-title">Education</motion.h2>
+      <motion.div variants={stagger} className="timeline">
+        {EDUCATION.map((e) => (
+          <motion.div key={e.degree + e.period} variants={rise} className="panel timeline-item" whileHover={{ x: 4 }}>
+            <div className="row-between">
+              <h3 className="item-title"><VscMortarBoard className="ico" /> {e.school}</h3>
+              <span className="muted-tag">{e.period}</span>
+            </div>
+            <p className="blue">{e.degree}</p>
+            <p className="muted">{e.note}</p>
+          </motion.div>
+        ))}
+      </motion.div>
+
+      <div className="two-col">
+        <motion.div variants={rise} className="panel">
+          <h2 className="sec-title"><VscVerified className="ico" /> Certifications</h2>
+          <ul className="plain-list">{CERTS.map((c) => <li key={c}>{c}</li>)}</ul>
+        </motion.div>
+
+        <motion.div variants={rise} className="panel">
+          <h2 className="sec-title"><VscOrganization className="ico" /> Activities</h2>
+          <p className="item-title">Problem Solving Club · ISAMM</p>
+          <ul className="plain-list">
+            <li>Active club member</li>
+            <li>Bee Battle Manouba contest (beginner category)</li>
+            <li>Made the club's "Getting Started with Python" tutorial video</li>
+          </ul>
+        </motion.div>
+      </div>
+    </Page>
+  );
+}
