@@ -1,0 +1,236 @@
+:root {
+  --bg: #1e1e1e;
+  --side: #252526;
+  --act: #333333;
+  --tab: #252526;
+  --tab-on: #1e1e1e;
+  --head: #1a1a2e;
+  --bd: #2c313a;
+  --fg: #abb2bf;
+  --mut: #7d8590;
+  --acc: #007acc;
+  --acc-fg: #fff;
+  --panel: #1b1d21;
+  --g: #4ebf99;
+  --p: #f472b6;
+  --b: #38bdf8;
+}
+
+html[data-theme="monokai"] {
+  --bg: #272822;
+  --side: #21221c;
+  --act: #1b1c18;
+  --tab: #1e1f1c;
+  --tab-on: #272822;
+  --head: #1b1c18;
+  --bd: #3e3d32;
+  --fg: #f8f8f2;
+  --mut: #9a977f;
+  --acc: #a6e22e;
+  --acc-fg: #1e1f1c;
+  --panel: #2d2e27;
+  --g: #a6e22e;
+  --p: #f92672;
+  --b: #66d9ef;
+}
+
+html[data-theme="github-dark"] {
+  --bg: #0d1117;
+  --side: #161b22;
+  --act: #010409;
+  --tab: #010409;
+  --tab-on: #0d1117;
+  --head: #010409;
+  --bd: #30363d;
+  --fg: #c9d1d9;
+  --mut: #8b949e;
+  --acc: #1f6feb;
+  --acc-fg: #fff;
+  --panel: #161b22;
+  --g: #3fb950;
+  --p: #f778ba;
+  --b: #58a6ff;
+}
+
+html[data-theme="rose-pine"] {
+  --bg: #191724;
+  --side: #1f1d2e;
+  --act: #16141f;
+  --tab: #16141f;
+  --tab-on: #191724;
+  --head: #16141f;
+  --bd: #2a2837;
+  --fg: #e0def4;
+  --mut: #908caa;
+  --acc: #eb6f92;
+  --acc-fg: #191724;
+  --panel: #1f1d2e;
+  --g: #9ccfd8;
+  --p: #eb6f92;
+  --b: #c4a7e7;
+}
+
+html[data-theme="tokyo-night"] {
+  --bg: #1a1b26;
+  --side: #16161e;
+  --act: #13131a;
+  --tab: #16161e;
+  --tab-on: #1a1b26;
+  --head: #13131a;
+  --bd: #292e42;
+  --fg: #a9b1d6;
+  --mut: #787c99;
+  --acc: #7aa2f7;
+  --acc-fg: #16161e;
+  --panel: #1f2335;
+  --g: #9ece6a;
+  --p: #bb9af7;
+  --b: #7dcfff;
+}
+
+html[data-theme="catppuccin"] {
+  --bg: #1e1e2e;
+  --side: #181825;
+  --act: #11111b;
+  --tab: #181825;
+  --tab-on: #1e1e2e;
+  --head: #11111b;
+  --bd: #313244;
+  --fg: #cdd6f4;
+  --mut: #9399b2;
+  --acc: #cba6f7;
+  --acc-fg: #11111b;
+  --panel: #25253a;
+  --g: #a6e3a1;
+  --p: #f5c2e7;
+  --b: #89dceb;
+}
+
+html[data-theme="nord"] {
+  --bg: #2e3440;
+  --side: #292e39;
+  --act: #242933;
+  --tab: #292e39;
+  --tab-on: #2e3440;
+  --head: #242933;
+  --bd: #3b4252;
+  --fg: #d8dee9;
+  --mut: #8f9aaf;
+  --acc: #88c0d0;
+  --acc-fg: #2e3440;
+  --panel: #343b49;
+  --g: #a3be8c;
+  --p: #b48ead;
+  --b: #81a1c1;
+}
+
+html .miniSideDiv {
+  background: var(--act) !important;
+  border-right-color: var(--bd);
+}
+
+html .side-btn {
+  color: var(--mut);
+}
+
+html .side-btn:hover,
+html .side-btn.active {
+  color: var(--fg);
+}
+
+html .side-btn.active::before,
+html .file-item.active::before {
+  background: var(--acc);
+}
+
+html .explorer-panel {
+  background: var(--side);
+  color: var(--fg);
+  border-right-color: var(--bd);
+}
+
+html .explorer-panel .section-title {
+  color: var(--fg);
+}
+
+html .file-item:hover {
+  background: color-mix(in srgb, var(--fg) 8%, transparent);
+}
+
+html .file-item.active {
+  background: color-mix(in srgb, var(--fg) 14%, transparent);
+  color: var(--fg);
+}
+
+html .explorer-footer {
+  border-top-color: var(--bd);
+}
+
+html .tabs-header-container,
+html .tabs-bar {
+  background: var(--tab);
+}
+
+html .tab-item {
+  background: var(--tab);
+  color: var(--mut);
+}
+
+html .tab-item.active {
+  background: var(--tab-on);
+  color: var(--fg);
+}
+
+html .breadcrumbs-bar {
+  background: var(--bg);
+}
+
+html .footer-status-bar,
+html .remote-icon {
+  background: var(--acc);
+  color: var(--acc-fg);
+}
+
+html .top-bar-container {
+  background: var(--side);
+  position: relative;
+  z-index: 60;
+  overflow: visible;
+}
+
+html .top-bar-btn {
+  color: var(--fg);
+}
+
+html .page,
+html .home-container {
+  --text: var(--fg);
+  --muted: var(--mut);
+  --green: var(--g);
+  --pink: var(--p);
+  --blue: var(--b);
+  --line: var(--bd);
+  --bg-chip: var(--panel);
+}
+
+html .panel {
+  background: var(--panel);
+}
+
+html .btn-primary,
+html .filter-pill {
+  background: var(--acc);
+  border-color: var(--acc);
+  color: var(--acc-fg);
+}
+
+html .filter.on {
+  color: var(--acc-fg);
+}
+
+html .hero-name,
+html .page-title,
+html .card-title,
+html .item-title {
+  color: var(--fg);
+}
